@@ -42,6 +42,7 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            font-size: 18px;
         }
 
         nav {
@@ -63,6 +64,7 @@
             margin: 0 1rem;
             position: relative;
             transition: color 0.3s ease;
+            font-size: 1.1rem;
         }
 
         nav a::after {
@@ -81,12 +83,12 @@
         }
 
         section {
-            min-height: 90vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
@@ -115,11 +117,11 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
 
         p {
@@ -129,6 +131,7 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease, transform 1s ease;
+            font-size: 1.2rem;
         }
 
         .highlight {
@@ -136,6 +139,18 @@
             position: relative;
             display: inline-block;
             font-style: italic;
+            animation: flicker 2s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+                opacity: 1;
+                text-shadow: none;
+            }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                opacity: 0.8;
+                text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+            }
         }
 
         .highlight::after {
@@ -162,6 +177,7 @@
             text-align: center;
             opacity: 0;
             transition: opacity 0.5s ease;
+            font-size: 1.4rem;
         }
 
         .typewriter.typing {
@@ -174,16 +190,24 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
-            p, .typewriter {
-                font-size: 0.9rem;
+            p {
+                font-size: 1rem;
+            }
+
+            .typewriter {
+                font-size: 1.2rem;
             }
 
             nav {
@@ -192,6 +216,7 @@
 
             nav a {
                 margin: 0.5rem;
+                font-size: 1rem;
             }
         }
 
