@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya's Personal Manifesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color-1: #1a1a1a;
+            --bg-color-2: #2a0033;
+            --text-color: #ffff99;
+            --accent-color: #ff6600;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .afacad-flux-regular {
+            font-family: "Afacad Flux", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
+        }
+
+        .afacad-flux-bold {
+            font-family: "Afacad Flux", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings: "slnt" 0;
+        }
+
+        body {
+            background-color: var(--bg-color-1);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: relative;
+        }
+
+        section::after {
+            content: '~';
+            position: absolute;
+            bottom: 2rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--bg-color-1);
+        }
+
+        section:nth-child(even) {
+            background: linear-gradient(135deg, var(--bg-color-2), var(--bg-color-1));
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            position: relative;
+            display: inline-block;
+            font-style: italic;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.5s ease;
+        }
+
+        .highlight.animate::after {
+            width: 100%;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 0.15em solid var(--accent-color);
+            white-space: normal;
+            margin: 0 auto 2rem;
+            max-width: 800px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .typewriter.typing {
+            opacity: 1;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent-color) }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p, .typewriter {
+                font-size: 0.9rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 0.5rem;
+            }
+        }
+
+        ::selection {
+            background-color: var(--accent-color);
+            color: var(--bg-color-1);
+        }
+    </style>
+</head>
+<body class="afacad-flux-regular">
+    <nav>
+        <a href="#values">Values</a>
+        <a href="#truths">Truths</a>
+        <a href="#pursuit">Pursuit</a>
+        <a href="#ideal-world">Ideal World</a>
+        <a href="#ideal-life">Ideal Life</a>
+        <a href="#cosmic-vision">Cosmic Vision</a>
+        <a href="#envisioned-world">Envisioned World</a>
+    </nav>
+
+    <section id="values">
+        <h1 class="afacad-flux-bold">My <span class="highlight">Values</span></h1>
+        <div class="typewriter">Integrity, Authenticity, Truth, Power, Bliss, Ecstasy, Fun, Radiance, Brilliance, Sharing, Enriching</div>
+        <p>These values form the foundation of my existence, guiding my actions and shaping my interactions with the world. They represent a commitment to living a life of purpose, joy, and meaningful contribution, embracing the full spectrum of human experience while staying true to my core beliefs.</p>
+    </section>
+
+    <section id="truths">
+        <h2 class="afacad-flux-bold">Truths I Hold Most <span class="highlight">Sacred</span></h2>
+        <div class="typewriter">Oneness, Love</div>
+        <p>At the core of my beliefs lies the profound understanding of our interconnectedness and the transformative power of love. These truths serve as a compass, directing my path towards unity and compassion in all aspects of life, fostering a deep sense of connection with all beings and the universe itself.</p>
+    </section>
+
+    <section id="pursuit">
+        <h2 class="afacad-flux-bold">What Am I Truly in <span class="highlight">Pursuit</span> of?</h2>
+        <div class="typewriter">God, Supreme, Ultimate, Approval, Acceptance, Celebration, Comfort, Bliss, Sublimation</div>
+        <p>My journey is a quest for the divine, seeking the highest form of consciousness and understanding. It's a pursuit of spiritual fulfillment, inner peace, and the ultimate realization of our true nature. I strive for a state of being where every moment is infused with spiritual ecstasy, living in harmony with the cosmic order.</p>
+    </section>
+
+    <section id="ideal-world">
+        <h2 class="afacad-flux-bold">My Ideal <span class="highlight">World</span></h2>
+        <div class="typewriter">Peace, Leadership, Community, Harmony, Celebration, Life-sensitive, Vegan, Ahimsa, Humble, Graceful</div>
+        <p>The world I envision is one of harmony and mutual respect, where leadership is guided by compassion and responsibility. It's a world that celebrates diversity, practices non-violence, and nurtures all forms of life with grace and humility. In this ideal world, every action is rooted in love and consideration for all beings.</p>
+    </section>
+
+    <section id="ideal-life">
+        <h2 class="afacad-flux-bold">My Ideal <span class="highlight">Life</span></h2>
+        <div class="typewriter">Abundance, Luxury, Cooperation, Balance, Dharmic, Nature, Cosmic, Enlightenment, Autonomous, Devotion, Tantra, Shakti</div>
+        <p>My ideal life is a harmonious blend of spiritual enlightenment and material abundance. It's a life of balance, where I can explore the cosmos of consciousness while being grounded in nature. It's about leading with wisdom, surrounded by love and devotion, and experiencing the divine in every moment. This life embodies the principles of self-sustainability, passionate intensity, and the union of spiritual and physical realms.</p>
+    </section>
+
+    <section id="cosmic-vision">
+        <h2 class="afacad-flux-bold">My Cosmic <span class="highlight">Vision</span></h2>
+        <div class="typewriter">Consciousness, Oneness, Synergy, Vibrant, Empowering, Magical, Inspiring, Higher Dimensions, Supreme Realization</div>
+        <p>I'm cultivating a reality where consciousness permeates every interaction, where we recognize the divinity in all beings. It's a world of joy, safety, and acceptance, where the boundaries between physical and spiritual realms blur, leading to supreme realization. This vision encompasses a universe where every entity is aware of its interconnectedness, fostering a harmonious and thriving existence for all.</p>
+    </section>
+
+    <section id="envisioned-world">
+        <h2 class="afacad-flux-bold">The World I <span class="highlight">Envision</span> for Those Around Me</h2>
+        <div class="typewriter">Phygital, Truth-aligned, Superconscious, Integrity, Oneness, Compassion, Exploration, Healing, Gratitude</div>
+        <p>The world I envision for others is a seamless blend of physical and digital realities, rooted in truth and consciousness. It's a world where outdated systems give way to new paradigms based on integrity and compassion. This world fosters exploration, healing, and gratitude, enabling everyone to reach their highest potential. It's a reality where the constraints of resources, knowledge, and power are eliminated, allowing for unbridled human possibility and a collective ascension to higher states of being.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const highlights = document.querySelectorAll('.highlight');
+            const navLinks = document.querySelectorAll('nav a');
+            const paragraphs = document.querySelectorAll('p');
+            const typewriters = document.querySelectorAll('.typewriter');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        
+                        const highlight = entry.target.querySelector('.highlight');
+                        if (highlight) {
+                            setTimeout(() => {
+                                highlight.classList.add('animate');
+                            }, 300);
+                        }
+
+                        const paragraph = entry.target.querySelector('p');
+                        if (paragraph) {
+                            setTimeout(() => {
+                                paragraph.style.opacity = '1';
+                                paragraph.style.transform = 'translateY(0)';
+                            }, 500);
+                        }
+
+                        const typewriter = entry.target.querySelector('.typewriter');
+                        if (typewriter && !typewriter.classList.contains('typing')) {
+                            typewriter.classList.add('typing');
+                            typewriterEffect(typewriter);
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').slice(1);
+                    const targetSection = document.getElementById(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            function typewriterEffect(element) {
+                const text = element.textContent;
+                element.textContent = '';
+                let i = 0;
+                const typing = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typing);
+                        element.style.borderRight = 'none';
+                    }
+                }, 50);
+            }
+        });
+    </script>
+</body>
+</html>
